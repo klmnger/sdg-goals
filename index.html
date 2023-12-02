@@ -9,7 +9,7 @@
     <title>SDG Goals</title>
     <style>
         body {
-            font-family: 'Crimson Pro', sans-serif;
+            font-family:  'Arial', sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
@@ -37,7 +37,7 @@
             height: 60vw; /* Use viewport width for better responsiveness */
             max-width: 300px; /* Set a maximum width */
             max-height: 300px; /* Set a maximum height */
-            background-color: #c7cccf;
+            background-color: #fff;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -45,6 +45,11 @@
             color: #141313;
             font-size: 10px; /* Adjust font size for mobile */
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Add white shadow */
+        }
+        .big-circle img {
+            max-width: 70%;
+            max-height: 70%;
+            border-radius: 0%;
         }
 
         /* Add animation keyframes for sliding effect */
@@ -76,6 +81,7 @@
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Add white shadow */
             /* Add animation properties to the small circle */
             animation: descend 1s ease-in-out;
+            z-index: 3;
         } 
        
         .small-circle img {
@@ -106,6 +112,7 @@
         .sdg-content {
             font-size: 16px;
             text-align: center;
+            font-weight: bold;
             padding-top: 40px;;
             position: absolute;
             top: 50%;
@@ -119,27 +126,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            z-index: 2;
         }
         .sdg-content2 {
-            font-size: 14px;
-            text-align: center;
-            padding-top: 70px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 50vw; /* Use viewport width for better responsiveness */
-            height: 50vw; /* Use viewport width for better responsiveness */
-            max-width: 250px; /* Set a maximum width */
-            max-height: 250px; /* Set a maximum height */
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .sdg-content3 {
             font-size: 12px;
             text-align: center;
+            font-weight: bold;
             padding-top: 70px;
             position: absolute;
             top: 50%;
@@ -153,6 +145,25 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            z-index: 2;
+        }
+        .sdg-content3 {
+            font-size: 10px;
+            text-align: center;
+            padding-top: 70px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50vw; /* Use viewport width for better responsiveness */
+            height: 50vw; /* Use viewport width for better responsiveness */
+            max-width: 250px; /* Set a maximum width */
+            max-height: 250px; /* Set a maximum height */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
         }
         .sdg-topic {
             font-size: 30px;
@@ -173,7 +184,7 @@
             justify-content: center;
         }
         .sdg-topic2 {
-            font-size: 28px;
+            font-size: 22px;
             text-align: center;
             padding-bottom: 150px;
             text-align: center;
@@ -191,7 +202,7 @@
             justify-content: center;
         }
         .sdg-topic3 {
-            font-size: 24px;
+            font-size: 18px;
             text-align: center;
             padding-bottom: 150px;
             text-align: center;
@@ -207,6 +218,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+        a{
+            padding-top: 200px;
+            background-color: transparent;
+            color: #000000;
+            z-index: 3;
         }
         #big-letter {
                 font-size: 48px;
@@ -244,31 +261,38 @@
                 font-size: 12px;
                 padding-top: 40px;
             }
+            
+            .sdg-content2 {
+                font-size: 10px;
+                padding-top: 50px;
+            
+            }
+            .sdg-content3 {
+                font-size: 9px;
+                padding-top: 50px;
+            
+            }
             .sdg-topic {
-                font-size: 20px;
+                font-size: 16px;
                 padding-bottom: 120px;
                 
                
             }
-            .sdg-content2 {
-                font-size: 10px;
-                padding-top: 40px;
-            
-            }
-            .sdg-content3 {
-                font-size: 10px;
-                padding-top: 40px;
-            
-            }
             .sdg-topic2 {
-                font-size: 20px;
+                font-size: 14px;
                 padding-bottom: 120px;
                 
             }
             .sdg-topic3 {
-                font-size: 18px;
+                font-size: 12px;
                 padding-bottom: 120px;
                 padding-top:20px;
+            }
+            a{
+            padding-top: 150px;
+            background-color: transparent;
+            color: #000000;
+            z-index: 3;
             }
         }
 
@@ -299,6 +323,7 @@
             .sdg-topic {
             font-size: 30px;
             }
+           
         }
 
         @media (min-width: 768px) {
@@ -331,21 +356,7 @@
 <div id="circle-container">
     <!-- Creating 17 small circles -->
     <div class="big-circle">
-        <table>
-            <tr>
-                <td><div id="big-letter">S</div></td>
-                <td>ustainable</td>
-            </tr>
-            <tr>
-                <td><div id="big-letter">D</div></td>
-                <td>evelopment</td>
-            </tr>
-            <tr>
-                <td><div id="big-letter">G</div></div></td>
-                <td>oals</td>
-            </tr>
-        </table>
-        
+        <img src="img/big-circle.jpg">
     </div>
 </div>
 
@@ -354,43 +365,45 @@
     const bigCircle = document.querySelector('.big-circle');
     const totalSmallCircles = 17;
 
+    const youtubeLink = 'https://rb.gy/oi1bj0';
     const sdgData = [
-        { text: "<div class= 'sdg-topic'>No Poverty</div><div class= 'sdg-content'>This goal strives to end poverty in all its forms globally. This involves ensuring equal rights to resources, basic services, and economic opportunities for everyone, especially those living in extreme poverty.</div>",
-         image: "img/1.png" },
-        { text: "<div class= 'sdg-topic'>Zero Hunger</div><div class= 'sdg-content'>This Goal aims to end hunger and achieve food security. This involves promoting sustainable agriculture, improving nutritional access, and supporting small-scale farmers to ensure everyone has access to sufficient, safe, and nutritious food.</div>", 
+        {text: "<a href='https://rb.gy/oi1bj0' target='_blank'>More Info</a><div class='sdg-topic'>No Poverty</div><div class='sdg-content2'>This goal strives to end poverty in all its forms globally. This involves ensuring equal rights to resources, basic services, and economic opportunities for everyone, especially those living in extreme poverty.</div>",
+        image: "img/1.png"
+        },
+        { text: "<a href='https://www.youtube.com/watch?v=6au2B0OybZ4&list=PLdpp6woNyWPMMqWqB85RDfSsD6FBY6W4U&index=3' target='_blank'>More Info</a><div class= 'sdg-topic'>Zero Hunger</div><div class= 'sdg-content2'>This Goal aims to end hunger and achieve food security. This involves promoting sustainable agriculture, improving nutritional access, and supporting small-scale farmers to ensure everyone has access to sufficient, safe, and nutritious food.</div>", 
         image: "img/2.png" },
-        { text: "<div class= 'sdg-topic2'>Good Health <br>&<br> Well-being</div><div class= 'sdg-content2'>This goal focuses on ensuring healthy lives and promoting well-being for all at all ages. This involves addressing major health issues, providing universal healthcare, and promoting health education to prevent diseases and improve overall well-being.</div>", 
+        { text: "<a href='https://www.youtube.com/watch?v=7ns9iZqrMFU&list=PLdpp6woNyWPMMqWqB85RDfSsD6FBY6W4U&index=4' target='_blank'>More Info</a><div class= 'sdg-topic2'>Good Health <br>&<br> Well-being</div><div class= 'sdg-content2'>This goal focuses on ensuring healthy lives and promoting well-being for all at all ages. This involves addressing major health issues, providing universal healthcare, and promoting health education to prevent diseases and improve overall well-being.</div>", 
         image: "img/3.png" },
-        { text: "<div class= 'sdg-topic'>Quality Education</div><div class= 'sdg-content'>This goal aims to ensure inclusive and equitable quality education for all. This involves eliminating disparities in access to education, promoting lifelong learning opportunities, and fostering environments that encourage creativity and critical thinking.</div>", 
+        { text: "<a href='https://www.youtube.com/watch?v=4-yeChl8CVM&list=PLdpp6woNyWPMMqWqB85RDfSsD6FBY6W4U&index=5' target='_blank'>More Info</a><div class= 'sdg-topic'>Quality Education</div><div class= 'sdg-content2'>This goal aims to ensure inclusive and equitable quality education for all. This involves eliminating disparities in access to education, promoting lifelong learning opportunities, and fostering environments that encourage creativity and critical thinking.</div>", 
         image: "img/4.png" },
-        { text: "<div class= 'sdg-topic'>Gender Equality</div><div class= 'sdg-content2'>This goal advocates for gender equality and empowerment of all women and girls. This involves ending discrimination, violence, and harmful practices against women and girls, ensuring equal opportunities in education and employment, and promoting women's participation in decision-making.</div>", 
+        { text: "<a href='https://www.youtube.com/watch?v=oY1TzsVM6U8&list=PLdpp6woNyWPMMqWqB85RDfSsD6FBY6W4U&index=6' target='_blank'>More Info</a><div class= 'sdg-topic2'>Gender Equality</div><div class= 'sdg-content2'>This goal advocates for gender equality and empowerment of all women and girls. This involves ending discrimination, violence, and harmful practices against women and girls, ensuring equal opportunities in education and employment, and promoting women's participation in decision-making.</div>", 
         image: "img/5.png" },
-        { text: "<div class= 'sdg-topic'>Clean Water <br>&<br> Sanitation </div><div class= 'sdg-content2'>This goal targets universal access to clean water and sanitation. This involves improving water quality, managing water resources sustainably, and ensuring access to basic sanitation facilities for all, particularly in underserved communities.</div>", 
+        { text: "<a href='https://www.youtube.com/watch?v=uvrFWjMMbIs&list=PLdpp6woNyWPMMqWqB85RDfSsD6FBY6W4U&index=7' target='_blank'>More Info</a><div class= 'sdg-topic2'>Clean Water <br>&<br> Sanitation </div><div class= 'sdg-content2'>This goal targets universal access to clean water and sanitation. This involves improving water quality, managing water resources sustainably, and ensuring access to basic sanitation facilities for all, particularly in underserved communities.</div>", 
         image: "img/6.png" },
-        { text: "<div class= 'sdg-topic'>Affordable <br>&<br> Clean Energy</div><div class= 'sdg-content2'>This goal aims to ensure access to affordable, reliable, sustainable, and modern energy for all. This involves promoting renewable energy sources, increasing energy efficiency, and ensuring energy access in developing regions.</div>", 
+        { text: "<a href='https://www.youtube.com/watch?v=g6Ne6lNVUsk&list=PLdpp6woNyWPMMqWqB85RDfSsD6FBY6W4U&index=8' target='_blank'>More Info</a><div class= 'sdg-topic2'>Affordable <br>&<br> Clean Energy</div><div class= 'sdg-content2'>This goal aims to ensure access to affordable, reliable, sustainable, and modern energy for all. This involves promoting renewable energy sources, increasing energy efficiency, and ensuring energy access in developing regions.</div>", 
         image: "img/7.png" },
-        { text: "<div class= 'sdg-topic2'>Decent Work <br>&<br> Economic Growth </div><div class= 'sdg-content2'>This goal strives to promote sustained, inclusive, and sustainable economic growth, full and productive employment, and decent work for all. This involves creating job opportunities, ensuring fair wages, and fostering a business environment that supports innovation and entrepreneurship</div>", 
+        { text: "<a href='https://www.youtube.com/watch?v=mhyMb3TQVvs&list=PLdpp6woNyWPMMqWqB85RDfSsD6FBY6W4U&index=9' target='_blank'>More Info</a><div class= 'sdg-topic3'>Decent Work & Economic Growth </div><div class= 'sdg-content2'>This goal strives to promote sustained, inclusive, and sustainable economic growth, full and productive employment, and decent work for all. This involves creating job opportunities, ensuring fair wages, and fostering a business environment that supports innovation and entrepreneurship</div>", 
         image: "img/8.png" },
-        { text: "<div class= 'sdg-topic3'>Industry, Innovation <br>&<br> Infrastructure</div><div class= 'sdg-content3'>This goal focuses on building resilient infrastructure, promoting inclusive and sustainable industrialization, and fostering innovation. This involves investing in infrastructure development, supporting technological progress, and ensuring that no one is left behind in the process.</div>", 
+        { text: "<a href='https://www.youtube.com/watch?v=YODUERb0www&list=PLdpp6woNyWPMMqWqB85RDfSsD6FBY6W4U&index=10' target='_blank'>More Info</a><div class= 'sdg-topic3'>Industry, Innovation <br>&<br> Infrastructure</div><div class= 'sdg-content3'>This goal focuses on building resilient infrastructure, promoting inclusive and sustainable industrialization, and fostering innovation. This involves investing in infrastructure development, supporting technological progress, and ensuring that no one is left behind in the process.</div>", 
         image: "img/9.png" },
-        { text: "<div class= 'sdg-topic2'>Reduced Inequality</div><div class= 'sdg-content2'>This Goal aims to reduce inequality within and among countries. This involves adopting policies that promote income growth for all, eliminating discriminatory laws and practices, and ensuring equal opportunities for all people, regardless of their background.</div>", 
+        { text: "<a href='https://www.youtube.com/watch?v=sh7pROSN-Is&list=PLdpp6woNyWPMMqWqB85RDfSsD6FBY6W4U&index=11' target='_blank'>More Info</a><div class= 'sdg-topic3'>Reduced Inequality</div><div class= 'sdg-content2'>This Goal aims to reduce inequality within and among countries. This involves adopting policies that promote income growth for all, eliminating discriminatory laws and practices, and ensuring equal opportunities for all people, regardless of their background.</div>", 
         image: "img/10.png" },
-        { text: "<div class= 'sdg-topic2'>Sustainable Cities <br>&<br> Communities</div><div class= 'sdg-content2'>This goal seeks to make cities and human settlements inclusive, safe, resilient, and sustainable. This involves ensuring access to adequate housing, promoting sustainable urbanization, and improving environmental sustainability in urban areas.</div>", 
+        { text: "<a href='https://www.youtube.com/watch?v=65_MMPMNs2Y&list=PLdpp6woNyWPMMqWqB85RDfSsD6FBY6W4U&index=12' target='_blank'>More Info</a><div class= 'sdg-topic3'>Sustainable Cities <br>&<br> Communities</div><div class= 'sdg-content2'>This goal seeks to make cities and human settlements inclusive, safe, resilient, and sustainable. This involves ensuring access to adequate housing, promoting sustainable urbanization, and improving environmental sustainability in urban areas.</div>", 
         image: "img/11.png" },
-        { text: "<div class= 'sdg-topic2'>Responsible Consumption & Production</div><div class= 'sdg-content2'>This goal advocates for responsible consumption and production patterns. This involves promoting sustainable practices, reducing waste, and ensuring the efficient use of natural resources to minimize the environmental impact of consumption.</div>", 
+        { text: "<a href='https://www.youtube.com/watch?v=bSUpbUCD4to&list=PLdpp6woNyWPMMqWqB85RDfSsD6FBY6W4U&index=13' target='_blank'>More Info</a><div class= 'sdg-topic3'>Responsible Consumption <br>&<br> Production</div><div class= 'sdg-content3'>This goal advocates for responsible consumption and production patterns. This involves promoting sustainable practices, reducing waste, and ensuring the efficient use of natural resources to minimize the environmental impact of consumption.</div>", 
         image: "img/12.png" },
-        { text: "<div class= 'sdg-topic'>Climate Action</div><div class= 'sdg-content'>This goal addresses climate change and its impacts. This involves taking urgent action to combat climate change, implementing measures to adapt to its effects, and raising awareness to build resilience and promote sustainable practices.</div>", 
+        { text: "<a href='https://www.youtube.com/watch?v=5SMo1_pNRW4&list=PLdpp6woNyWPMMqWqB85RDfSsD6FBY6W4U&index=14' target='_blank'>More Info</a><div class= 'sdg-topic'>Climate Action</div><div class= 'sdg-content2'>This goal addresses climate change and its impacts. This involves taking urgent action to combat climate change, implementing measures to adapt to its effects, and raising awareness to build resilience and promote sustainable practices.</div>", 
         image: "img/13.png" },
-        { text: "<div class= 'sdg-topic'>Life Below Water</div><div class= 'sdg-content'>This goal focuses on conserving and sustainably using the oceans, seas, and marine resources. This involves preventing marine pollution, protecting marine ecosystems, and managing fisheries sustainably to preserve the health of our oceans.</div>", 
+        { text: "<a href='https://www.youtube.com/watch?v=eSOAUL55d-Q&list=PLdpp6woNyWPMMqWqB85RDfSsD6FBY6W4U&index=15' target='_blank'>More Info</a><div class= 'sdg-topic'>Life Below Water</div><div class= 'sdg-content2'>This goal focuses on conserving and sustainably using the oceans, seas, and marine resources. This involves preventing marine pollution, protecting marine ecosystems, and managing fisheries sustainably to preserve the health of our oceans.</div>", 
         image: "img/14.png" },
-        { text: "<div class= 'sdg-topic'>Life on Land</div><div class= 'sdg-content'>This Goal aims to protect, restore, and promote sustainable use of terrestrial ecosystems. This involves combatting deforestation, preventing land degradation, and promoting biodiversity conservation to ensure the health of ecosystems on land.</div>", 
+        { text: "<a href='https://www.youtube.com/watch?v=sN38ot1q1kk&list=PLdpp6woNyWPMMqWqB85RDfSsD6FBY6W4U&index=16' target='_blank'>More Info</a><div class= 'sdg-topic'>Life on Land</div><div class= 'sdg-content2'>This Goal aims to protect, restore, and promote sustainable use of terrestrial ecosystems. This involves combatting deforestation, preventing land degradation, and promoting biodiversity conservation to ensure the health of ecosystems on land.</div>", 
         image: "img/15.png" },
-        { text: "<div class= 'sdg-topic'>Peace, Justice <br>&<br> Strong Institutions</div><div class= 'sdg-content2'>This goal  seeks to promote peaceful and inclusive societies, provide access to justice for all, and build effective, accountable, and inclusive institutions. This involves reducing violence, ensuring access to justice, and fostering transparent and accountable governance.</div>", 
+        { text: "<a href='https://www.youtube.com/watch?v=E0_gEIRYlqA&list=PLdpp6woNyWPMMqWqB85RDfSsD6FBY6W4U&index=17' target='_blank'>More Info</a><div class= 'sdg-topic2'>Peace, Justice <br>&<br> Strong Institutions</div><div class= 'sdg-content3'>This goal  seeks to promote peaceful and inclusive societies, provide access to justice for all, and build effective, accountable, and inclusive institutions. This involves reducing violence, ensuring access to justice, and fostering transparent and accountable governance.</div>", 
         image: "img/16.png" },
-        { text: "<div class= 'sdg-topic'>Partnerships for <br>the Goals</div><div class= 'sdg-content2'>This goal emphasizes the importance of global partnerships to achieve the other 16 goals. This involves mobilizing resources, fostering international cooperation, and promoting a supportive global trading system to address the interconnected challenges facing the world.</div>", 
+        { text: "<a href='https://www.youtube.com/watch?v=ljagqV0larY&list=PLdpp6woNyWPMMqWqB85RDfSsD6FBY6W4U&index=18' target='_blank'>More Info</a><div class= 'sdg-topic2'>Partnerships <br>for<br>the Goals</div><div class= 'sdg-content3'>This goal emphasizes the importance of global partnerships to achieve the other 16 goals. This involves mobilizing resources, fostering international cooperation, and promoting a supportive global trading system to address the interconnected challenges facing the world.</div>", 
         image: "img/17.png" }
     ];
-
+    
     const delay = 100;
 
     async function animateCircles() {
