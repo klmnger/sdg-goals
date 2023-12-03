@@ -17,6 +17,10 @@
             justify-content: center;
             height: 100vh;
             background-color: #000;
+            background-image: url(img/background.jpg);
+            background-size: cover; /* Set the initial background size */
+            background-repeat: no-repeat;
+            background-position: center;
 
         }
 
@@ -27,6 +31,25 @@
             height: 80vw; /* Use viewport width for better responsiveness */
             max-height: 500px; /* Set a maximum height */
         }
+        /* Add this to your existing styles */
+/* Add this to your existing styles */
+        .logo {
+            position: absolute;
+            max-width: 200px; /* Adjust the size as needed */
+            top: 20px; /* Adjust the top position as needed */
+        }
+
+        .logo-left {
+            left: 20px; /* Adjust the left position for the left logo */
+            top: 20px;
+        }
+
+        .logo-right {
+            right: 20px; /* Adjust the right position for the right logo */
+            top: 10px;
+            max-width: 250px;
+        }
+
 
         .big-circle {
             position: absolute;
@@ -237,6 +260,20 @@
             body{
                margin-left: 12px; 
             }
+            .logo {
+                max-width: 100px; /* Adjust the size as needed */
+            }
+            .logo-left {
+                left: 10px; /* Adjust the left position for the left logo */
+                padding-top: 15px;
+            }
+
+            .logo-right {
+                right: 10px; /* Adjust the right position for the right logo */
+                top: -15px;
+                max-width: 140px;
+            }
+
             #circle-container {
                 width: 80vw;
                 max-width: none;
@@ -301,6 +338,10 @@
             body{
                margin-left: 10px; 
             }
+            .logo-left {
+            left: 20px; /* Adjust the left position for the left logo */
+            padding-top: 30px;
+            }
             #circle-container {
                 width: 70vw;
                 max-width: none;
@@ -331,6 +372,10 @@
             .big-circle {
                 font-size: 24px;
             }
+            .logo-left {
+            left: 20px; /* Adjust the left position for the left logo */
+            padding-top: 90px;
+            }
             .small-circle {
                 width: 15vw;
                 height: 15vw;
@@ -352,7 +397,8 @@
     </style>
 </head>
 <body>
-
+<img src="img/ri_theme.png" alt="Logo 1" class="logo logo-left">
+<img src="img/rac_logo.png" alt="Logo 2" class="logo logo-right">
 <div id="circle-container">
     <!-- Creating 17 small circles -->
     <div class="big-circle">
@@ -370,7 +416,7 @@
         {text: "<a href='https://rb.gy/oi1bj0' target='_blank'>More Info</a><div class='sdg-topic'>No Poverty</div><div class='sdg-content2'>This goal strives to end poverty in all its forms globally. This involves ensuring equal rights to resources, basic services, and economic opportunities for everyone, especially those living in extreme poverty.</div>",
         image: "img/1.png"
         },
-        { text: "<a href='https://www.youtube.com/watch?v=6au2B0OybZ4&list=PLdpp6woNyWPMMqWqB85RDfSsD6FBY6W4U&index=3' target='_blank'>More Info</a><div class= 'sdg-topic'>Zero Hunger</div><div class= 'sdg-content2'>This Goal aims to end hunger and achieve food security. This involves promoting sustainable agriculture, improving nutritional access, and supporting small-scale farmers to ensure everyone has access to sufficient, safe, and nutritious food.</div>", 
+        { text: "<div class= 'sdg-topic'>Zero Hunger</div><div class= 'sdg-content2'></div>", 
         image: "img/2.png" },
         { text: "<a href='https://www.youtube.com/watch?v=7ns9iZqrMFU&list=PLdpp6woNyWPMMqWqB85RDfSsD6FBY6W4U&index=4' target='_blank'>More Info</a><div class= 'sdg-topic2'>Good Health <br>&<br> Well-being</div><div class= 'sdg-content2'>This goal focuses on ensuring healthy lives and promoting well-being for all at all ages. This involves addressing major health issues, providing universal healthcare, and promoting health education to prevent diseases and improve overall well-being.</div>", 
         image: "img/3.png" },
